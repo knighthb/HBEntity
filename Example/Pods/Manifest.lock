@@ -1,0 +1,14 @@
+PODS:
+  - HBEntity (0.1.0)
+
+DEPENDENCIES:
+  - HBEntity (from `../`)
+
+EXTERNAL SOURCES:
+  HBEntity:
+    :path: ../
+
+SPEC CHECKSUMS:
+  HBEntity: 14280dab2dde42698917f17e59061fd34ce0165c
+
+COCOAPODS: 0.39.0

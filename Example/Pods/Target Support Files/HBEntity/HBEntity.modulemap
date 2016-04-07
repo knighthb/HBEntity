@@ -1,0 +1,6 @@
+framework module HBEntity {
+  umbrella header "HBEntity-umbrella.h"
+
+  export *
+  module * { export * }
+}

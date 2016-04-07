@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>HBEntity-HBEntity.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>HBEntity.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-HBEntity_Example.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-HBEntity_Tests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>3F3432AD20A49825E0C1684DA98DD6F9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A7D03AE459B97C58CE0E543A282518BC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BD69BB2C32C8E4C13CD42619EEF44145</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E93197425C9226F746325968F87A1C76</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

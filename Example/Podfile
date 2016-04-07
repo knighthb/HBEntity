@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'HBEntity_Example', :exclusive => true do
+  pod 'HBEntity', :path => '../'
+end
+
+target 'HBEntity_Tests', :exclusive => true do
+  pod 'HBEntity', :path => '../'
+
+  
+end
