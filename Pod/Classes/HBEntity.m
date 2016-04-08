@@ -159,8 +159,13 @@
                     }
                 }else {
                     if (propertyInfo.isNumber) {
-                        NSNumberFormatter * numFormatter =   [[NSNumberFormatter alloc] init];
-                       NSNumber * data = [numFormatter numberFromString:[NSString stringWithFormat:@"%@",dic[key]]];
+                        NSNumber * data = nil;
+                        if(propertyInfo.type & HBTypeEncodingBoolType) {
+                            data = [NSNumber numberWithBool:[self boolValueWith:dic[key]]];
+                        }else {
+                            NSNumberFormatter * numFormatter =   [[NSNumberFormatter alloc] init];
+                            data = [numFormatter numberFromString:[NSString stringWithFormat:@"%@",dic[key]]];
+                        }
                         [self sendMsgToInstance:instance withSetter:propertyInfo withNumber:data];
                     }
                 }

@@ -14,42 +14,37 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    HBTestPerson * entity = [HBTestPerson transferEntityWithDic:@{@"entityname":@"hehe",
-                                                                  @"entitynum":@"1",
-                                                                  @"testEntity":@{@"name":@"xiaoming",
-                                                                                  @"age":@(34)
-                                                                                  
-                                                                                  },
-                                                                  @"testEntities":@[@{@"name":@"xiaoming",
-                                                                                      @"age":@(34)
-                                                                                      
-                                                                                      },
-                                                                                    @{@"name":@"xiaoming",
-                                                                                      @"age":@(34)
-                                                                                      
-                                                                                      },
-                                                                                    @{@"name":@"xiaoming",
-                                                                                      @"age":@(34)
-                                                                                      
-                                                                                      }]}];
+    NSDictionary * entityDic = @{@"entityname":@"hehe",
+                                 @"entitynum":@"1",
+                                 @"testEntity":@{@"name":@"xiaoming",
+                                                 @"age":@(34)
+                                                 },
+                                 @"testEntities":@[@{@"name":@"xiaoming",
+                                                     @"age":@(34)
+                                                     },
+                                                   @{@"name":@"xiaoming",
+                                                     @"age":@(34)
+                                                     },
+                                                   @{@"name":@"xiaoming",
+                                                     @"age":@(34)
+                                                     }]};
+    HBTestPerson * entity = [HBTestPerson transferEntityWithDic:entityDic];
     NSLog(@"%@======",entity.testEntity.name);
     if (entity.testEntities.count > 0) {
         for (HBTestEntity * testEntity in entity.testEntities) {
             NSLog(@"name = %@ | value = %@",testEntity.name,testEntity.age);
         }
     }
-    HBArrayTestEntity * arrayTestEntity = [HBArrayTestEntity transferEntityWithObject:@[@{@"name":@"xiaoming",
-                                                                                          @"age":@(34)
-                                                                                          
-                                                                                          },
-                                                                                        @{@"name":@"xiaoming",
-                                                                                          @"age":@(34)
-                                                                                          
-                                                                                          },
-                                                                                        @{@"name":@"xiaoming",
-                                                                                          @"age":@(34)
-                                                                                          
-                                                                                          }]];
+    NSArray * entityArray = @[@{@"name":@"xiaoming",
+                                @"age":@(34)
+                                },
+                              @{@"name":@"xiaoming",
+                                @"age":@(34)
+                                },
+                              @{@"name":@"xiaoming",
+                                @"age":@(34)
+                                }];
+    HBArrayTestEntity * arrayTestEntity = [HBArrayTestEntity transferEntityWithObject:entityArray];
     NSLog(@"%@",arrayTestEntity);
     return YES;
 }
