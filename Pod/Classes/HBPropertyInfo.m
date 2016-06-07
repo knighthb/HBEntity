@@ -34,6 +34,7 @@ static NSDictionary * propertyTypeMap;
                  @"s":[NSNumber class],//short
                  @"q":[NSNumber class],//NSInteger
                  @"Q":[NSNumber class],//NSUInteger
+                 @"c":[NSNumber class]//bool
                  };
     propertyTypeMap = @{
                  @"B":@(HBTypeEncodingBoolType),//bool
@@ -44,6 +45,7 @@ static NSDictionary * propertyTypeMap;
                  @"s":@(HBTypeEncodingShortType),//short
                  @"q":@(HBTypeEncodingIntegerType),//NSInteger
                  @"Q":@(HBTypeEncodingUIntegerType),//NSUInteger
+                 @"c":@(HBTypeEncodingBoolType),//bool
                  };
 }
 
@@ -121,6 +123,9 @@ static NSDictionary * propertyTypeMap;
             }
         }
         value[j]= '\0';
+        if (strEqualTo(value, "NSNumber")) {
+            _isNumber = YES;
+        }
         return value;
     }else {
         if (len == 1) {

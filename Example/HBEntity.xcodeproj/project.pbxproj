@@ -21,7 +21,7 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
-		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		873B8AEB1B1F5CCA007FD442 /* Main.APHomeSuperSaveMultiBrandModelstoryboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.APHomeSuperSaveMultiBrandModelstoryboard */; };
 		A082A389C70161B885C3F4B6 /* Pods_HBEntity_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D3BB4565ED478E83405DF3E /* Pods_HBEntity_Example.framework */; };
 		DED0A0B21CB645AE0033E80C /* HBArrayTestEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DED0A0AD1CB645AE0033E80C /* HBArrayTestEntity.m */; };
 		DED0A0B31CB645AE0033E80C /* HBTestEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DED0A0AF1CB645AE0033E80C /* HBTestEntity.m */; };
@@ -63,7 +63,7 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		70330284B204FEBBD879BA44 /* Pods_HBEntity_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HBEntity_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		873B8AEA1B1F5CCA007FD442 /* Main.APHomeSuperSaveMultiBrandModelstoryboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Main.APHomeSuperSaveMultiBrandModelstoryboard; sourceTree = "<group>"; };
 		8A10723F646D7B461ECA46CA /* Pods-HBEntity_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HBEntity_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HBEntity_Example/Pods-HBEntity_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		93FF6A04868C8B5E27C410C1 /* Pods-HBEntity_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HBEntity_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HBEntity_Tests/Pods-HBEntity_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		9EBC055EE86E36960E51DAD8 /* Pods-HBEntity_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HBEntity_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-HBEntity_Example/Pods-HBEntity_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 				DED0A0AB1CB645AE0033E80C /* DemoEntity */,
 				6003F59C195388D20070C39A /* HBAppDelegate.h */,
 				6003F59D195388D20070C39A /* HBAppDelegate.m */,
-				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
+				873B8AEA1B1F5CCA007FD442 /* Main.APHomeSuperSaveMultiBrandModelstoryboard */,
 				6003F5A5195388D20070C39A /* HBViewController.h */,
 				6003F5A6195388D20070C39A /* HBViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
@@ -299,7 +299,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
+				873B8AEB1B1F5CCA007FD442 /* Main.APHomeSuperSaveMultiBrandModelstoryboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);

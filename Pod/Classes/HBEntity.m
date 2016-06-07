@@ -13,17 +13,25 @@
 #import "HBEntityUtil.h"
 @implementation HBEntity
 + (BOOL)boolValueWith:(NSString *)boolString {
-    if (boolString && boolString.length > 0) {
-        const char * lowercaseBoolString = boolString.lowercaseString.UTF8String;
-        //只要不是no、false和0都返回YES
-        if (strEqualTo("no", lowercaseBoolString) ||
-            strEqualTo("false", lowercaseBoolString) ||
-            strEqualTo("0", lowercaseBoolString)) {
-            return NO;
-        }else {
+    if ([boolString isKindOfClass:[NSString class]]) {
+        if (boolString && boolString.length > 0) {
+            const char * lowercaseBoolString = boolString.lowercaseString.UTF8String;
+            //只要不是no、false和0都返回YES
+            if (strEqualTo("no", lowercaseBoolString) ||
+                strEqualTo("false", lowercaseBoolString) ||
+                strEqualTo("0", lowercaseBoolString)) {
+                return NO;
+            }else {
+                return YES;
+            }
+        }
+    }else {
+        id boolValue = boolString;
+        if (kCFBooleanTrue == (__bridge CFBooleanRef)(boolValue)) {
             return YES;
         }
     }
+    
     return NO;
 }
 
@@ -142,6 +150,11 @@
                             if ([propertyInfo canSetValue]) {
                                 ((void (*)(id,SEL,id))(void *)objc_msgSend)(instance,propertyInfo.setter,data);
                             }
+                        }else {
+                            id data = dic[key];
+                            if ([propertyInfo canSetValue]) {
+                                ((void (*)(id,SEL,id))(void *)objc_msgSend)(instance,propertyInfo.setter,data);
+                            }
                         }
                     }
                 }
@@ -162,6 +175,7 @@
                         NSNumber * data = nil;
                         if(propertyInfo.type & HBTypeEncodingBoolType) {
                             data = [NSNumber numberWithBool:[self boolValueWith:dic[key]]];
+
                         }else {
                             NSNumberFormatter * numFormatter =   [[NSNumberFormatter alloc] init];
                             data = [numFormatter numberFromString:[NSString stringWithFormat:@"%@",dic[key]]];
@@ -196,6 +210,8 @@
             ((void (*)(id,SEL,long))(void *)objc_msgSend)(instance,propertyInfo.setter,[number longValue]);
         }else if (propertyInfo.type & HBTypeEncodingShortType) {
             ((void (*)(id,SEL,short))(void *)objc_msgSend)(instance,propertyInfo.setter,[number shortValue]);
+        }else {
+            ((void (*)(id,SEL,NSNumber*))(void *)objc_msgSend)(instance,propertyInfo.setter,number);
         }
     }
     
