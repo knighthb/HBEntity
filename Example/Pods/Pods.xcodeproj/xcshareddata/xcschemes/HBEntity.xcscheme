@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '89DE3318492482CB5B7A123F'
+               BlueprintIdentifier = '46B8D47BB1A32E028C5D1B5A'
                BlueprintName = 'HBEntity'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'HBEntity.framework'>

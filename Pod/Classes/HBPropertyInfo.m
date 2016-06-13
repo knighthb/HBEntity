@@ -101,6 +101,7 @@ static NSDictionary * propertyTypeMap;
                 }
             }
         }
+        free(capitalizedName);
     }
     return self;
 }
@@ -113,7 +114,7 @@ static NSDictionary * propertyTypeMap;
         if (len==1) {
             return "NSValue";
         }
-        char * value = malloc(sizeof(char *)*strlen(sourceValue-3));
+        char * value = malloc(sizeof(char *)*strlen(sourceValue));
         unsigned int i;
         unsigned int j = 0;
         for (i=0; i < len; i++) {

@@ -1,5 +1,5 @@
 PODS:
-  - HBEntity (0.1.0)
+  - HBEntity (0.4.0)
 
 DEPENDENCIES:
   - HBEntity (from `../`)
@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  HBEntity: 14280dab2dde42698917f17e59061fd34ce0165c
+  HBEntity: c82964d8005f91525b253c8ea85fb766bdd97953
 
 COCOAPODS: 0.39.0

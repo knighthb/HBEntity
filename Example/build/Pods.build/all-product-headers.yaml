@@ -1,0 +1,48 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/knight/githubRepo/HBEntity/Example/build/Debug-iphonesimulator/HBEntity.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "HBEntity-Swift.h",
+          'external-contents': "/Users/knight/githubRepo/HBEntity/Example/build/Debug-iphonesimulator/HBEntity.framework/Headers/HBEntity-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "HBEntity-umbrella.h",
+          'external-contents': "/Users/knight/githubRepo/HBEntity/Example/Pods/Target Support Files/HBEntity/HBEntity-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "HBEntity.h",
+          'external-contents': "/Users/knight/githubRepo/HBEntity/Pod/Classes/HBEntity.h"
+        },
+        {
+          'type': 'file',
+          'name': "HBEntityUtil.h",
+          'external-contents': "/Users/knight/githubRepo/HBEntity/Pod/Classes/HBEntityUtil.h"
+        },
+        {
+          'type': 'file',
+          'name': "HBPropertyInfo.h",
+          'external-contents': "/Users/knight/githubRepo/HBEntity/Pod/Classes/HBPropertyInfo.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/knight/githubRepo/HBEntity/Example/build/Debug-iphonesimulator/HBEntity.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/knight/githubRepo/HBEntity/Example/build/Pods.build/Debug-iphonesimulator/HBEntity.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}
