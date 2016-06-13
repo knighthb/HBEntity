@@ -102,8 +102,13 @@
                 if (mapedKeyClass) {
                     Class cls = mapedKeyClass[key];
                     if (cls && ![cls isSubclassOfClass:[NSNull class]]) {
-                        id data = [cls transferEntityWithObject:array[index]];
-                        [instanceArray addObject:data];
+                        if ([cls isSubclassOfClass:[NSString class]]) {
+                            NSString * string = array[index];
+                            [instanceArray addObject:string];
+                        }else {
+                            id data = [cls transferEntityWithObject:array[index]];
+                            [instanceArray addObject:data];
+                        }
                     }
                 }
             }
