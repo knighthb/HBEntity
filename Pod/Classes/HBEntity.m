@@ -70,7 +70,6 @@
         for (unsigned int index = 0; index < outCount; index++) {
             struct objc_property * property = properties[index];
             const char * name =  property_getName(property);
-            NSLog(@"%s",name);
             NSString * key = [NSString stringWithUTF8String:name];
             if ([[self hb_filerArray] containsObject:key]) {
                 continue;
@@ -173,7 +172,13 @@
                 //普通
                 if (!propertyInfo.isNumber) {
                     if ([propertyInfo canSetValue]) {
-                        ((void (*)(id,SEL,id))(void *)objc_msgSend)(instance,propertyInfo.setter,dic[key]);
+                        id value = dic[key];
+                        if ([value isKindOfClass:[NSNumber class]]) {
+                            if ([@"NSString" isEqualToString:NSStringFromClass(propertyInfo.clazz)]) {
+                                value = [NSString stringWithFormat:@"%@",value];
+                            }
+                        }
+                        ((void (*)(id,SEL,id))(void *)objc_msgSend)(instance,propertyInfo.setter,value);
                     }
                 }else {
                     if (propertyInfo.isNumber) {
