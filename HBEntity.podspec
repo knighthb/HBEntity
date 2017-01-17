@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "HBEntity"
-  s.version          = "1.1.0"
+  s.version          = "1.1.1"
   s.summary          = "This is a tool transfer NSArray and NSDictionary object to your custom entity,using runtime"
 
 # This description is used to generate tags and improve search results.
