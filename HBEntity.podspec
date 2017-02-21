@@ -8,14 +8,14 @@
 
 Pod::Spec.new do |s|
   s.name             = "HBEntity"
-  s.version          = "1.1.1"
+  s.version          = "1.1.2"
   s.summary          = "This is a tool transfer NSArray and NSDictionary object to your custom entity,using runtime"
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
 #   * Try to keep it short, snappy and to the point.
 #   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!  
+#   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description      = <<-DESC
   							This is a tool transfer NSArray and NSDictionary object to your custom entity/model,using runtime.
   							we don't have to declair which properties in entity/model are belongs to whitelist and blacklist,
@@ -31,8 +31,5 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
-  s.resource_bundles = {
-    'HBEntity' => ['Pod/Assets/*.png']
-  }
 
 end
