@@ -108,7 +108,7 @@ static NSDictionary * propertyTypeMap;
 }
 
 - (void)parseClassWithPropertyAttributeValue:(const char *)attrValue {
-    char * classType = "";
+   const char * classType = "";
     size_t len = strlen(attrValue);
     if (len <= 0) classType = "";
     char * value = malloc(sizeof(char *)*strlen(attrValue));
