@@ -100,50 +100,49 @@ static NSDictionary * propertyTypeMap;
                     }
                 }
             }
+            free(attributes_t);
         }
         free(capitalizedName);
     }
     return self;
 }
 
-- (const char *)filterClassName:(const char *)sourceValue {
-    size_t len = strlen(sourceValue);
-    if (len <= 0) return nil;
-    if ('@'==sourceValue[0]) {//id 类型
+- (void)parseClassWithPropertyAttributeValue:(const char *)attrValue {
+    char * classType = "";
+    size_t len = strlen(attrValue);
+    if (len <= 0) classType = "";
+    char * value = malloc(sizeof(char *)*strlen(attrValue));
+    if ('@'==attrValue[0]) {//id 类型
         _isNumber = NO;
         if (len==1) {
-            return "NSValue";
+            classType = "NSValue";
         }
-        char * value = malloc(sizeof(char *)*strlen(sourceValue));
         unsigned int i;
         unsigned int j = 0;
         for (i=0; i < len; i++) {
-            char tmp = sourceValue[i];
+            char tmp = attrValue[i];
             if ('@'!=tmp && '\"'!=tmp) {
-                value[j++] = sourceValue[i];
+                value[j++] = attrValue[i];
             }
         }
         value[j]= '\0';
         if (strEqualTo(value, "NSNumber")) {
             _isNumber = YES;
         }
-        return value;
+        classType = value;
     }else {
         if (len == 1) {
             _isNumber = YES;
-            NSString * key = [NSString stringWithUTF8String:sourceValue];
+            NSString * key = [NSString stringWithUTF8String:attrValue];
             _type |= [propertyTypeMap[key] integerValue];
-            return NSStringFromClass(classMap[key]).UTF8String;
+            classType = NSStringFromClass(classMap[key]).UTF8String;
         }
-        return "NSString";
+        classType = "NSString";
     }
-}
-
-- (void)parseClassWithPropertyAttributeValue:(const char *)attrValue {
-    const char * value = [self filterClassName:attrValue];
-    NSString * className = [[NSString alloc ]initWithCString:value encoding:NSUTF8StringEncoding];
+    NSString * className = [[NSString alloc ]initWithCString:classType encoding:NSUTF8StringEncoding];
     _clazz = NSClassFromString(className);
-    value = nil;
+    free(value);
+    classType = nil;
 }
 
 - (BOOL)canSetValue {

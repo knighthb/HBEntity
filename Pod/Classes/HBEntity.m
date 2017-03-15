@@ -87,6 +87,7 @@
             
         }
     }
+    free(properties);
     return instance;
 
 }
@@ -196,6 +197,7 @@
             }
         }
     }
+    free(properties);
     return instance;
 }
 
