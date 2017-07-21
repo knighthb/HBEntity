@@ -73,7 +73,6 @@ static NSDictionary * propertyTypeMap;
             if (attributesCount > 0) {
                 for (unsigned int attrIndex = 0; attrIndex < attributesCount; attrIndex ++) {
                     objc_property_attribute_t property_attr_t = attributes_t[attrIndex];
-                    NSLog(@"property attribute %d: name = %s | value = %s",attrIndex,property_attr_t.name,property_attr_t.value);
                     if (strEqualTo("T", property_attr_t.name)) {
                         //数字、日期等格式没有处理
                         [self parseClassWithPropertyAttributeValue:property_attr_t.value];

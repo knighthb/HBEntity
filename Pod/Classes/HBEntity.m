@@ -131,7 +131,6 @@
         for (unsigned int index = 0; index < outCount; index++) {
             struct objc_property * property = properties[index];
             const char * name =  property_getName(property);
-            NSLog(@"%s",name);
             NSString * key = [NSString stringWithUTF8String:name];
             if ([[self hb_filerArray] containsObject:key]) {
                 continue;
