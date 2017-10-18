@@ -60,7 +60,8 @@
 + (instancetype)transferEntityWithArray:(NSArray *)array {
     unsigned int outCount;
     NSDictionary * reverseTransferDic = nil;
-    id instance = [[self alloc] init];
+    __weak typeof(self) weakSelf = self;
+    id instance = [[weakSelf alloc] init];
     
     if ([instance respondsToSelector:@selector(hb_transferDic)]) {
         reverseTransferDic = [self reverseTransferDic:[instance hb_transferDic]];
