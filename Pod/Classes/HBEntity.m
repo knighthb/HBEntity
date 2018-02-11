@@ -107,8 +107,13 @@
                             NSString * string = array[index];
                             [instanceArray addObject:string];
                         }else {
-                            id data = [cls transferEntityWithObject:array[index]];
-                            [instanceArray addObject:data];
+                            if ([cls conformsToProtocol:@protocol(HBEntityProtocol)]) {
+                                id data = [cls transferEntityWithObject:array[index]];
+                                [instanceArray addObject:data];
+                            } else {
+                                [instanceArray addObject:array[index]];
+                            }
+                            
                         }
                     }
                 }
